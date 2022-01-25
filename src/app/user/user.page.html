@@ -1,0 +1,34 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Perfil del pokemon</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content *ngIf="pokemon">
+
+	<ion-grid>
+		<ion-row>
+			<ion-col sizeMd ="8" offsetMd="2">
+				<ion-card>
+					<ion-card-content class="ion-text-center">
+						<img src="{{pokemon.sprites.back_default}}">
+						<ion-card-title>
+							{{pokemon.name}}
+						</ion-card-title>
+						<div>
+							<strong>Experiencia Base: {{pokemon.base_experience}}</strong>
+							<hr>
+							<ion-card-subtitle>Ataques</ion-card-subtitle>
+							<div *ngFor="let atack of pokemon.moves">
+								<p>{{atack.move.name}}</p>
+							</div>
+						</div>
+					</ion-card-content>
+				</ion-card>
+			</ion-col>	
+		</ion-row>		
+	</ion-grid>			
+</ion-content>

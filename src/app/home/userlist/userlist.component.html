@@ -1,0 +1,15 @@
+<ion-grid>
+	<ion-row>
+		<ion-col sizeMd ="8" offsetMd="2">
+			<ion-list>
+			  <ion-item *ngFor="let dato of Datos" [routerLink]="['/user/' + dato.id]">
+			  	<ion-avatar slot ="start">
+			  		<img src="{{dato.sprites.back_default}}" alt="" style="width: 100%">
+			  	</ion-avatar>
+			    <ion-label><strong>{{dato.name}}</strong></ion-label>
+			  </ion-item>
+			</ion-list>
+		</ion-col>
+	</ion-row>
+</ion-grid>
+
