@@ -19,10 +19,7 @@ export class UserPage implements OnInit {
   	
   	this.user = this.ar.snapshot.paramMap.get('id');
   	this.http.get(`https://pokeapi.co/api/v2/pokemon/` +this.user)
-  	.subscribe(res => {
-  		this.pokemon = res 
-  		console.log(res)
-  	});
+  	.subscribe(res => this.pokemon = res);
   }
 
 

@@ -14,7 +14,6 @@ export class UserlistComponent implements OnInit {
 
   ngOnInit() {
   	this.obtenerDatos(20)
-  	console.log(this.Datos)
   }
 
   obtenerunPokemones(id){
